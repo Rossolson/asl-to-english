@@ -1,0 +1,205 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<base href="https://www.handspeak.com/word/asl-eng/">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="Description" content="ASL to English reverse dictionary by searching ASL word or sign to find its English equivalent meaning." />
+<title>ASL-to-English Dictionary</title>
+<link rel="stylesheet" href="/tool/css/header.css" />
+<style type="text/css">
+.grid-results {
+	display: flex; display: -webkit-flex; 
+-webkit-flex-flow: row wrap;      flex-flow: row wrap;
+-webkit-align-items: stretch; align-items: stretch; 
+-webkit-align-content: space-around;    align-content: space-around;
+-webkit-flex: 1 0 450px;	flex: 1 0 450px;
+margin:25px; background:#fff; padding:20px;
+}
+.grid-results > h3 {
+width:100%;
+font: bold 16px arial,tahoma,geneva, verdana; letter-spacing:1px; color: #222; padding:5px 20px;
+}
+
+.grid-dictbox, .grid-ad { 
+display: flex; display: -webkit-flex; 
+-webkit-flex-flow: column wrap;      flex-flow: column wrap;
+-webkit-align-items: flex-start; align-items: flex-start;
+-webkit-align-content: center;    align-content: center;
+-webkit-flex: 1 0 250px;	flex: 1 0 250px;
+border: 1px solid #fbfbfb; padding:15px 20px; margin:10px;
+-moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px;
+}
+.grid-ad { 
+border: none;
+}
+
+.grid-dictbox > h2 {
+display: flex; display: -webkit-flex;
+font: bold 14px arial,tahoma,geneva, verdana; letter-spacing:1px; color: #222; padding:5px 0px;
+}
+.dictvideo {
+display: flex; display: -webkit-flex;
+-webkit-align-items: flex-start; align-items: flex-start; 
+-webkit-align-content: center;    align-content: center;
+}
+.dictext {
+padding:15px 20px;}
+.dictext p {font-size: 0.85em; font-weight: normal; font-family:Verdana, Arial, Helvetica, sans-serif; line-height: 1.6em; margin:1.3em 0;}
+.dictad {flex: 1 0 auto; -webkit-flex: 1 0 auto; } /* push content below down */
+.dictpaging {background:#fbfbfb; padding:15px 20px; font: bold 16px arial,tahoma,geneva, verdana; letter-spacing:4px; text-align:center; } /* to del if not used? */
+
+/* video */
+@media only screen and (max-width: 2400px) {
+.video-asl {
+    width: 280px;    height: 280;
+}
+
+}
+/* tablet browsers, mini ipad*/
+@media only screen and (max-width: 768px){	
+.video-asl {
+    width: 240px; height: 240;}
+}
+/* */
+@media only screen and (max-width: 480px){
+.video-asl {
+    width: 200; height: 200;}
+}
+/* FORM */
+select {
+flex: 1 0 auto; -webkit-flex: 1 0 auto; }
+
+input, select {
+background:#fbfbfb; border:1px solid #efefef; padding:10px; margin-top:3px; font-size:0.9em;color:#000;}
+
+input:focus, textarea:focus {
+    border:1px solid #97d6eb; }
+.search-button {
+	background: #c79e2c; color:#fff; border:0px}
+
+.raised {
+      transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      transition-delay: 0.2s;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);}
+/* styling */
+
+.shadow1 {
+  -moz-box-shadow: 0px 0.5px 1.0px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0 1px 1.5px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 1.5px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
+}
+.shadow2 {
+  -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
+}
+
+</style> 
+</head>
+<body>
+
+<div class="grid-main">
+<div class="grid-row">
+<div class="grid-sidebar shadow1" style="margin: 20px auto;">
+<div style="padding:20px; margin: 20px auto;">
+<form name="fmSearch" method="get" action="/word/asl-eng/index.php" target="results">
+
+<!--<label for="frmHandshape">Handshapes</label>
+<input type="text" name="fmFig" id="frmHandshape" list="hsType" placeholder="handshape number">
+    <datalist id="hsType">
+      <option value="0-num">
+      <option value="0-flat">
+      <option value="0-baby">
+    </datalist>-->
+    
+<select name="fmFig" size="1" class="">
+<option value="Fig" selected>Handshape</option>
+<option value="0-num">0-round, 0-flat</option>
+<option value="1-num">1, D</option>
+<option value="1-claw">1-claw</option>
+<option value="1-i">1-i (I)</option>
+<option value="2-num">2 (V)</option>
+<option value="2-claw">2-claw</option>
+<option value="2-close">2-close (H,U)</option>
+<option value="2-cross">2-cross (R)</option>
+<option value="3-num">3-number, 3-claw</option>
+<option value="3-close">3-close, 3-bent</option>
+<option value="3-k">3-K or 3-P</option>
+<option value="4-num">4-number, 4-claw</option>
+<option value="4-close">4-close (B), 4-bent</option>
+<option value="5-num">5</option>
+<option value="5-close">5-close, 5-bent (15)</option>
+<option value="5-claw">5-claw</option>
+<option value="5-c">5-c (C)</option>
+<option value="5-half">5-half</option>
+<option value="6-num">6, 6-claw</option>
+<option value="6-y">6-inverse (Y)</option>
+<option value="7-8">7, horn, ILY</option>
+<option value="8-num">8, 8-open</option>
+<option value="9-num">9, F</option>
+<option value="10-num">10, A</option>
+<option value="10-s">10-s (S)</option>
+<option value="10-t">10-t (American T, European T)</option>
+<option value="10-m">10-m, M</option>
+<option value="10-n">10-n, N</option>
+<option value="20-num">20-num, G</option>
+<option value="20-l">20-c, L, claw-L</option>
+</select>
+
+<span>
+<a href="" onclick="NewWin=window.open('/word/asl-eng/hs-primes-popup.php','NewWin','menubar=no,status=no,scrollbars=yes,width=700,height=800,top=10,left=50');return false;">ASL handshape chart</a>
+</span>
+
+<br>
+<select name="fmMov" size="1" class="">
+<option value="Mov" selected>Movement</option>
+<option value="unidir">unidirectional or misc</option>
+<option value="repeat">repeated</option>
+<option value="convergent">convergent action (2-handed, approach)</option>
+<option value="divergent">divergent action (2-handed, separate)</option>
+</select>
+<span>
+<a href="" onclick="NewWin=window.open('/byte/p/phonology/mov-primes-popup.php','NewWin','menubar=no,status=no,scrollbars=yes,width=700,height=800,top=10,left=50');return false;">ASL movement chart</a>
+</span>
+
+<div>
+<select name="fmLoc" size="1" class="">
+	<option value="Loc" selected>Location</option>
+<option value="zero">in space</option>
+<option value="face">face, neck, forehead</option>
+<option value="head-side">head: side, back, top</option>
+<option value="palm">palm (non-dominant)</option>
+<option value="0-num">"0" (non-dominant hand)</option>
+<option value="1-num">"1" (non-dominant hand)</option>
+<option value="5-num">"5", "B" (non-dominant hand)</option>
+<option value="9-num">"9" (non-dominant hand)</option>
+<option value="10-s">"S" (non-dominant hand)</option>
+<option value="10-num">"10" (non-dominant hand)</option>
+<option value="hand">hand (non-dominant, unspecific)</option>
+<option value="torso">torso (chest or shoulders)</option>
+    <option value="arm">arm or elbow</option>
+    </select>
+</div>
+
+<select name="fmBoth" size="1" class="">
+<option value="0" selected>One handed or two-handed with different handshapes</option>
+<option value="1">Two-handed, alternating</option>
+<option value="2">Two-handed, both moving</option>
+</select>
+           
+<input type="submit" class="search-button raised" value="SEARCH">
+</form></div>
+
+</div><!-- end sidebar -->
+
+</div><!-- end row -->
+
+</div>
+
+
+</body>
+</html>
+
