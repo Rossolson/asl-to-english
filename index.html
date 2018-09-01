@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+<!-- python -m SimpleHTTPServer 8080 -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ASL Field Guide</title>
+    <link rel="stylesheet" href="style/base.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+
+    <!-- Bootstrap theme -->
+    <link href="style/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="style/theme.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Polyfills for IE -->
+    <script>
+      var loadedPolyfills = (function (window, Function) {
+        var namedPolyfills = [];
+
+        if(!window.Promise) {
+          document.write('<script src="//unpkg.com/es6-promise@3.2.1/dist/es6-promise.min.js"><\/script>');
+          namedPolyfills.push('window.Promise');
+        }
+
+        if(!Function.name) {
+          document.write('<script src="//unpkg.com/function.name-polyfill@latest/Function.name.js"><\/script>');
+          namedPolyfills.push('Function.name');
+        }
+
+        return namedPolyfills;
+      })(window, Function)
+    </script>
+</head>
+<body>
+	<header id="header" style="margin: 0 20%; text-align: center;">
+		<h1>ASL Field Guide</h1>
+		<p>Identify ASL signs by sight and movement</p>
+	</header>
+
+	<table id="demo" class="signs-tiny" style="margin: auto;">
+		<thead>
+			<tr>
+				<th class="word">ASL Sign</th>
+				<th class="hand">Hand Shape</th>
+				<th class="dir" >Movement</th>
+				<th class="loc" >Location</th>
+				<th class="rel" >RL Hand Relation</th>
+				<th>Non-hand modifiers</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com/word/a/a-abc.mp4">a</td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Neutral</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com/word/a/ahead.mp4">ahead</td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Neutral</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com/word/a/another.mp4">another</td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Neutral</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com/word/a/any-time.mp4">anytime</td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Neutral</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com/word/a/anywhere.mp4">anywhere</td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Neutral</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com/word/a/awesome.mp4">awesome</td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Neutral</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com/word/b/belong-to.mp4">belong to</td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Neutral</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com/word/f/follow.mp4">follow</td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Neutral</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com/word/f/founder.mp4">founder</td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Neutral</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com/word/f/fund-sum.mp4">fund</td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Neutral</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com/word/g/govern.mp4">govern</td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Neutral</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com/word/o/other.mp4">other</td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Neutral</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com/word/p/press.mp4">press</td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Neutral</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com/word/p/put.mp4">put</td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Neutral</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com/word/t/texas-austin.mp4">Texas - cities (Austin)</td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Neutral</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com/word/z/zero.mp4">zero</td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Neutral</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com/word/z/zilch-none.mp4">zilch</td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Neutral</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com/word/c/could-care-less.mp4">couldn't care less</a></td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Face</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com//word/c/crewcut.mp4">crewcut</a></td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Face</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com//word/d/drunk.mp4">drunk</a></td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Face</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com//word/f/feminism.mp4">feminism</a></td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Face</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com//word/f/flower.mp4">flower</a></td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Face</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com//word/f/fyi-inform.mp4">for your information (FYI)</a></td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Face</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com//word/h/homework.mp4">homework</a></td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Face</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com//word/i/impatient.mp4">impatient</a></td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Face</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com//word/i/information.mp4">information</a></td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Face</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com//word/l/luncheon.mp4">luncheon</a></td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Face</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com//word/m/mail.mp4">mail</a></td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Face</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com//word/n/napkin.mp4">napkin</a></td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Face</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com//word/n/nose-ring.mp4">nose ring</a></td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Face</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com//word/n/not.mp4">not</a></td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Face</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com//word/p/platypus.mp4">platypus</a></td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Face</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com//word/d/shot-drink2.mp4">shot (drink)</a></td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Face</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com//word/t/teacher.mp4">teacher</a></td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Face</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com//word/t/telescope.mp4">telescope</a></td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Face</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com//word/t/thin.mp4">thin</a></td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Face</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com//word/t/tomorrow.mp4">tomorrow</a></td>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Face</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com//word/y/yesterday.mp4">yesterday</h2>
+				<td class="hand">0-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >Face</td>
+				<td class="rel" >One Hand</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com/word/search/index.php?id=6801">lavish</td>
+				<td class="hand">5-num</td>
+				<td class="dir" >repeat</td>
+				<td class="loc" >torso</td>
+				<td class="rel" >Both</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td class="word"><a href="https://www.handspeak.com/word/search/index.php?id=2396">white</td>
+				<td class="hand">5-num</td>
+				<td class="dir" >unidirectional</td>
+				<td class="loc" >torso</td>
+				<td class="rel" >One hand</td>
+				<td>--</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+	<p></p>
+
+
+	<script src="js/tablefilter.js"></script>
+
+
+	<script data-config>
+		var filtersConfig = {
+			base_path: 'tablefilter/',
+			col_1: 'select',
+			col_2: 'select',
+			col_3: 'select',
+			col_4: 'select',
+			col_5: 'none',
+			popup_filters: true,
+			auto_filter: {
+				delay: 1100 //milliseconds
+			},
+			alternate_rows: true,
+			rows_counter: true,
+			btn_reset: true,
+			status_bar: true,
+			msg_filter: 'Filtering...',
+			col_widths:[
+				'125px', '90px', '100px',
+				'90px', '90px', '90px',
+				'90px', '90px', '90px'
+			]
+		};
+		var tf = new TableFilter('demo', filtersConfig);
+		tf.init();
+	</script>
+
+	<script>
+	  (function(loadedPolyfills, document) {
+		if(loadedPolyfills.indexOf('window.Promise') !== -1) {
+		  var msg = '<br><div class="alert alert-danger" role="alert">'
+			+ 'Your browser does not support <code>Promise</code>.<br>'
+			+ 'Use a polyfill to provide support for the missing language feature, eg:'
+			+ '<pre>https://unpkg.com/es6-promise@3.2.1/dist/es6-promise.min.js</pre>'
+			+ '</div>';
+			document.write(msg);
+		}
+		if(loadedPolyfills.indexOf('Function.name') !== -1) {
+		  var msg = '<br><div class="alert alert-danger" role="alert">'
+			+ 'Your browser does not support <code>Function.name</code>.<br>'
+			+ 'Use a polyfill to provide support for the missing language feature, eg:'
+			+ '<pre>https://unpkg.com/function.name-polyfill@latest/Function.name.js</pre>'
+			+ '</div>';
+			document.write(msg);
+		}
+	  })(loadedPolyfills, document)
+	</script>
+
+	<hr>
+
+	<footer id="info">
+		<p>Template by <a href="http://github.com/sindresorhus">Sindre Sorhus</a></p>
+	</footer>
+	</body>
+</html>
